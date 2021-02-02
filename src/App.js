@@ -1,7 +1,10 @@
 import "./App.css";
 import React from "react";
 import CharacterList from "./components/CharacterList";
+<<<<<<< HEAD
 import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
+=======
+>>>>>>> 54d4d45ca019110ebdb49b4d828764bb864fced4
 
 class App extends React.Component {
   constructor(props) {
@@ -9,6 +12,7 @@ class App extends React.Component {
 
     this.state = {
       characterList: [],
+<<<<<<< HEAD
       link: "https://rickandmortyapi.com/api/character/",
       proxNavigation: "https://rickandmortyapi.com/api/character/",
       loading: false,
@@ -112,6 +116,22 @@ class App extends React.Component {
         ) : (
           <CharacterList list={characterList} />
         )}
+=======
+    };
+  }
+
+  async componentDidMount() {
+    const result = await fetch("https://rickandmortyapi.com/api/character/");
+    const JSON = await result.json();
+    this.setState({ characterList: [...JSON.results] });
+  }
+
+  render() {
+    const { characterList } = this.state;
+    return (
+      <div className="App">
+        <CharacterList list={characterList} />
+>>>>>>> 54d4d45ca019110ebdb49b4d828764bb864fced4
       </div>
     );
   }
