@@ -1,34 +1,57 @@
+@import url("https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap");
 .App {
-  text-align: center;
+  position: relative;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.loading {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  border: 4px solid #388e3c;
+  border-top: transparent;
+  position: absolute;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  animation: rotate-loading 1s linear infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.button-close {
+  height: 2rem;
+  position: absolute;
+  right: 0.5rem;
+  cursor: pointer;
+}
+
+.length--person {
+  height: 50px;
+  width: 18rem;
+  border-radius: 4px;
+  background-color: #66bb6a;
+  font-family: "Londrina Solid", cursive;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  padding-left: 0.5rem;
+  color: #fff;
+  position: absolute;
+  right: 30px;
+  top: 50px;
+  z-index: 10;
+  animation: alert-modal 0.4s forwards;
+}
+
+@keyframes alert-modal {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes rotate-loading {
   from {
     transform: rotate(0deg);
   }

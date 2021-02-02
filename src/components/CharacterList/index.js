@@ -11,16 +11,18 @@ export default class CharacterList extends Component {
           justifyContent: "space-around",
         }}
       >
-        {this.props.list.map(({ name, image, gender, species, status }) => (
-          <Character
-            key={name}
-            name={name}
-            image={image}
-            gender={gender}
-            species={species}
-            status={status}
-          />
-        ))}
+        {this.props.list.map(
+          ({ name, image, gender, species, status }, index) => (
+            <Character
+              key={index}
+              name={name}
+              image={image}
+              gender={gender}
+              species={species}
+              status={status}
+            />
+          )
+        )}
       </div>
     );
   }
