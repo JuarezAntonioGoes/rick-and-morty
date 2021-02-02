@@ -1,6 +1,32 @@
 @import url("https://fonts.googleapis.com/css2?family=Londrina+Solid:wght@300&display=swap");
-.App {
-  position: relative;
+
+.pagination {
+  width: 100%;
+  display: flex;
+  margin: 2rem 0 0.5rem 0;
+}
+
+.pagination button {
+  height: 3rem;
+  font-size: 3rem;
+  color: #fff;
+  background-color: #ffc107;
+  border: none;
+  margin: 0 0.2rem;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+ 
+  background-color: #eebf32;
+  
+}
+
+.pagination button:nth-child(1) {
+  margin-left: 2rem;
 }
 
 .loading {

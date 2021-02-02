@@ -1,6 +1,7 @@
 import "./App.css";
 import React from "react";
 import CharacterList from "./components/CharacterList";
+import { BsChevronRight, BsChevronLeft } from "react-icons/bs";
 
 class App extends React.Component {
   constructor(props) {
@@ -98,9 +99,14 @@ class App extends React.Component {
           </div>
         )}
 
-        <button onClick={this.prevPage}>Prev</button>
-        <button onClick={this.nextPage}>Next</button>
-
+        <div className="pagination">
+          <button onClick={this.prevPage}>
+            <BsChevronLeft />
+          </button>
+          <button onClick={this.nextPage}>
+            <BsChevronRight />
+          </button>
+        </div>
         {loading ? (
           <div className="loading"></div>
         ) : (
